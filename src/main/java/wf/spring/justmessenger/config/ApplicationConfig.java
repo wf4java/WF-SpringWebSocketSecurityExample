@@ -11,9 +11,6 @@ import wf.spring.justmessenger.properties.JwtProperties;
 @EnableConfigurationProperties({JwtProperties.class})
 public class ApplicationConfig {
 
-
-
-
     @Bean
     public Validator defaultValidator() {
         return new LocalValidatorFactoryBean();
