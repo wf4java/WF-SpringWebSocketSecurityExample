@@ -65,7 +65,7 @@ function onError() {
 
 
 function sendName() {
-    stompClient.send("/messenger/send_message",
+    stompClient.send("/messenger/message",
         {},
        JSON.stringify( JSON.parse($("#name").val())));
 
