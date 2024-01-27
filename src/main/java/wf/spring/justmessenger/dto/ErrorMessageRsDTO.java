@@ -2,10 +2,9 @@ package wf.spring.justmessenger.dto;
 
 import lombok.*;
 
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 public class ErrorMessageRsDTO {
 
@@ -22,6 +21,11 @@ public class ErrorMessageRsDTO {
     public ErrorMessageRsDTO(Exception exception) {
         this.message = exception.getMessage();
         this.timestamp = System.currentTimeMillis();
+    }
+
+    public ErrorMessageRsDTO(String message, long timestamp) {
+        this.message = message;
+        this.timestamp = timestamp;
     }
 
     public ErrorMessageRsDTO(Exception exception, long timestamp) {

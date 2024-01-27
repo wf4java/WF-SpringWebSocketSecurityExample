@@ -2,7 +2,7 @@ package wf.spring.justmessenger.model.exception.basic;
 
 import org.springframework.http.HttpStatus;
 
-public abstract class HttpException extends BasicException {
+public abstract class HttpException extends RuntimeException {
 
     public HttpException() {
     }

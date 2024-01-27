@@ -2,8 +2,7 @@ package wf.spring.justmessenger.mapper;
 
 import org.springframework.stereotype.Component;
 import wf.spring.justmessenger.dto.auth.RegisterRqDTO;
-import wf.spring.justmessenger.dto.person.PersonRsDTO;
-import wf.spring.justmessenger.entity.person.Person;
+import wf.spring.justmessenger.entity.Person;
 
 @Component
 public class PersonMapper {
@@ -17,17 +16,6 @@ public class PersonMapper {
         person.setActive(true);
 
         return person;
-    }
-
-    public PersonRsDTO toPersonRsDTO(Person person) {
-        PersonRsDTO personRsDTO = new PersonRsDTO();
-
-        personRsDTO.setId(person.getId());
-        personRsDTO.setUsername(person.getUsername());
-        personRsDTO.setGender(person.getGender());
-        personRsDTO.setHasProfilePhoto(person.getProfilePhoto() != null);
-
-        return personRsDTO;
     }
 
 }
